@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "Guía de Comentarios de Código"
+  short_description: "Aplica reglas de comentarios en TypeScript/React, priorizando claridad, contexto útil y TODO/FIXME accionables en español."
+  default_prompt: "Antes de comentar, revisa siempre el diff actual del repositorio. Muestra primero una sección `Diff analizado:` con archivos y cambios concretos, y después entrega `Comentarios propuestos:` por archivo. Aplica la guía y mantén español consistente. Evita redundancias y usa JSDoc solo cuando aporte contexto real. Valida TODO/FIXME con etiquetas `TODO:` y `FIXME:` en mayúsculas al inicio, y con contenido accionable en redacción normal. No uses TODO para alternativas técnicas: usa `Decisión:` y `Alternativa:` cuando exista código comentado como opción válida. Si no hay contexto suficiente para conservar un bloque comentado, realiza una sola pregunta cerrada; sin respuesta, elimina el bloque."
