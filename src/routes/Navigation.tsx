@@ -1,9 +1,18 @@
 import {
 	BrowserRouter as Router,
-	Routes,
-	Route,
 	NavLink,
+	Route,
+	Routes,
 } from 'react-router-dom';
+
+import {
+	FormikAbstractationPage,
+	FormikBasicPage,
+	FormikBasicYupPage,
+	FormikComponentsPage,
+	RegisterPage,
+} from '../03-forms/pages';
+
 import logo from '../logo.svg';
 
 export const Navigation = () => {
@@ -15,20 +24,47 @@ export const Navigation = () => {
 					<ul>
 						<li>
 							<NavLink
-								to='/'
+								to='/register'
 								className={({ isActive }) =>
 									isActive ? 'nav-active' : ''
 								}>
-								Home
+								Register Page
 							</NavLink>
 						</li>
 						<li>
 							<NavLink
-								to='/about'
+								to='/formik-basic'
 								className={({ isActive }) =>
 									isActive ? 'nav-active' : ''
 								}>
-								About
+								Formik Basic
+							</NavLink>
+						</li>
+						<li>
+							<NavLink
+								to='/formik-yup'
+								className={({ isActive }) =>
+									isActive ? 'nav-active' : ''
+								}>
+								Formik Yup
+							</NavLink>
+						</li>
+						<li>
+							<NavLink
+								to='/formik-components'
+								className={({ isActive }) =>
+									isActive ? 'nav-active' : ''
+								}>
+								Formik Components
+							</NavLink>
+						</li>
+						<li>
+							<NavLink
+								to='/formik-abstractation'
+								className={({ isActive }) =>
+									isActive ? 'nav-active' : ''
+								}>
+								Formik Abstractation
 							</NavLink>
 						</li>
 						<li>
@@ -44,8 +80,20 @@ export const Navigation = () => {
 				</nav>
 
 				<Routes>
-					<Route path='/about' element={<h1>About</h1>} />
-					<Route path='/users' element={<h1>Users</h1>} />
+					<Route path='/register' element={<RegisterPage />} />
+					<Route path='/formik-basic' element={<FormikBasicPage />} />
+					<Route
+						path='/formik-yup'
+						element={<FormikBasicYupPage />}
+					/>
+					<Route
+						path='/formik-components'
+						element={<FormikComponentsPage />}
+					/>
+					<Route
+						path='/formik-abstractation'
+						element={<FormikAbstractationPage />}
+					/>
 					<Route path='/' element={<h1>Home</h1>} />
 				</Routes>
 			</div>
